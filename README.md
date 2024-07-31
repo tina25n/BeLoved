@@ -11,3 +11,5 @@ Run the following command in terminal
 This needs to be globally added to your computer
 - Go to https://firebase.google.com/docs/cli#install-cli-windows to install firebase cli **(use npm)**
 - run 'flutter pub get' in project terminal to install required dependencies
+- run 'flutterfire configure'
+- add 
