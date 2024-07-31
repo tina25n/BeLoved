@@ -1,40 +1,48 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MyApp());
-}
+import '../widgets/top_bar.dart';
+import '../widgets/next_button.dart';
+import 'sign_up.dart';
+import 'login.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class StartPage extends StatelessWidget {
+  const StartPage({
+    super.key,
+  });
+
+  static const routeName = '/';
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
-      child: MaterialApp(
-        title: 'BeLoved',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
-          primarySwatch:  Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        home: LoginPage(),
-      ),
-    );
-  }
-}
+    return Scaffold(
+      appBar: TopBar(
+          topText: 'Beloved'),
 
-class MyAppState extends ChangeNotifier {
-}
+      body: Center(
+        child:
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              NextButton(
+                buttonText: 'Sign Up',
+                onPressed: () {
+                  //Go to the Sign Up page
+                  Navigator.restorablePushNamed(
+                      context, SignUpPage.routeName);
+                },
+              ),
+              NextButton(
+                buttonText: 'Log In',
+                onPressed: () {
+                  //Go to the Log In page
+                  Navigator.restorablePushNamed(
+                      context, LogInPage.routeName);
+            }
+            )
+            ]
+          ),
+        )
+      );
 
-class LoginPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/Background.png'))),
-    );
   }
 }

@@ -5,13 +5,13 @@ import 'sample_item.dart';
 import 'sample_item_details_view.dart';
 
 /// Displays a list of SampleItems.
-class SampleItemListView extends StatelessWidget {
-  const SampleItemListView({
+class SampleItemListView1 extends StatelessWidget {
+  const SampleItemListView1({
     super.key,
     this.items = const [SampleItem(1), SampleItem(2), SampleItem(3)],
   });
 
-  static const routeName = '/';
+  static const routeName = '/sample_item_test';
 
   final List<SampleItem> items;
 
