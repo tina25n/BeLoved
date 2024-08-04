@@ -9,6 +9,7 @@ class NamePage extends StatelessWidget {
     super.key,
   });
 
+  // comment
   static const routeName = '/namePage';
 
   @override
