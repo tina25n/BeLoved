@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'basic_details.dart';
 import '../widgets/top_bar.dart';
 import '../widgets/next_button.dart';
-import '../widgets/textbox.dart';
+import '../widgets/text_field.dart';
 class NamePage extends StatelessWidget {
   const NamePage({
     super.key,
@@ -19,6 +19,10 @@ class NamePage extends StatelessWidget {
           topText: 'Your Name'),
       body: ListView(
           children:[
+            CustomTextField(
+                controller: TextEditingController(),
+                hint: "Name",
+                inputType: TextInputType.name),
             NextButton(
               buttonText: 'Next',
               onPressed: () {
@@ -27,11 +31,6 @@ class NamePage extends StatelessWidget {
                     context, BasicDetailsPage.routeName);
               },
             ),
-            CustomTextField(
-                controller: TextEditingController(),
-                name: "Name",
-                prefixIcon: Icons.text_snippet_outlined,
-                inputType: TextInputType.name)
           ]
       ),
     );
