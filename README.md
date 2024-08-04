@@ -16,4 +16,4 @@ This needs to be globally added to your computer
 Step 2: Configure your apps to use Firebase
 - run 'flutterfire configure'
 - use the existing configuration file.
-- select platforms: make sure "IOS" and "Android" are selected.
+- select platforms: make sure "IOS" and "Android" are selected. 
