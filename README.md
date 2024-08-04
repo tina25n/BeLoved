@@ -17,4 +17,3 @@ Step 2: Configure your apps to use Firebase
 - run 'flutterfire configure'
 - use the existing configuration file.
 - select platforms: make sure "IOS" and "Android" are selected.
-- add 
