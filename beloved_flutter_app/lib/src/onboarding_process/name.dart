@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'basic_details.dart';
-import '../widgets/top_bar.dart';
 import '../widgets/next_button.dart';
 import '../widgets/text_field.dart';
+import '../widgets/top_bar.dart';
+import 'basic_details.dart';
 
 class NamePage extends StatelessWidget {
   const NamePage({
@@ -16,16 +16,27 @@ class NamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: TopBar(topText: 'Your Name'),
+        appBar: AppBar(
+        backgroundColor: Colors.transparent,
+    ),
         body: Container(
           padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-          child: ListView(children: [
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
             CustomTextField(
                 controller: TextEditingController(),
-                title: "Name",
-                hint: "Name",
+                title: "First Name",
+                hint: "First Name",
                 inputType: TextInputType.name,
-                showInProfile: true),
+                showInProfile: false),
+            CustomTextField(
+                controller: TextEditingController(),
+                title: "Last Name",
+                hint: "Last Name",
+                inputType: TextInputType.name,
+                showInProfile: false),
+            Text("BeLoved will only share your last name with matches."),
             NextButton(
               buttonText: 'Next',
               onPressed: () {

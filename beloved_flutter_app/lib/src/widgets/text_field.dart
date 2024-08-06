@@ -26,7 +26,7 @@ class CustomTextField extends StatelessWidget {
         // title
         Text(title,
             style: const TextStyle(
-              fontSize: 30,
+              fontSize: 16,
               fontWeight: FontWeight.bold,
               color: Colors.black,
             )),
@@ -46,7 +46,7 @@ class CustomTextField extends StatelessWidget {
             textAlign: TextAlign.center,
             style: const TextStyle(
               color: Colors.black,
-              fontSize: 16,
+              fontSize: 20,
               fontWeight: FontWeight.w500, //half bold
             ),
             decoration: InputDecoration(
@@ -117,7 +117,7 @@ class _CheckboxWithTextFieldState extends State<CheckboxWithText> {
                 ))),
         SizedBox(width: 10),
         Text(
-          "Why so serious :)",
+          "Show on profile",
           style: const TextStyle(
             fontSize: 16,
             color: Colors.black,
