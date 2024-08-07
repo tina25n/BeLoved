@@ -15,16 +15,22 @@ class NamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:
-        PreferredSize(
-          preferredSize: Size.fromHeight(100),
-      child:AppBar(
-          backgroundColor: Colors.blueAccent,
-        )),
         body: Stack(
-          children: [Container(
+          children: [
+            Positioned.fill(
+                        child: Image.asset(
+                          'assets/images/Background.png', // Path to your image file
+                          fit: BoxFit.cover, // Ensure the image covers the entire area
+                        ),
+                      ),
+            Container(
             padding: EdgeInsets.symmetric(vertical: 18, horizontal: 15),
             child: Column(children: [
+              PreferredSize(
+                  preferredSize: Size.fromHeight(100),
+                  child:AppBar(
+                    backgroundColor: Colors.blueAccent,
+                  )),
               CustomTextField(
                   controller: TextEditingController(),
                   title: "First Name",
@@ -52,7 +58,6 @@ class NamePage extends StatelessWidget {
               ),
             ]),
           ),
-            //Transform.scale //TODO: finish the scaling so the background pic fills the screen.
         ]),
       backgroundColor: Color(0xFFFFF7EE),
     );
