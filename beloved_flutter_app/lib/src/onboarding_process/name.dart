@@ -15,20 +15,19 @@ class NamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-          children: [
-            Positioned.fill(
-                        child: Image.asset(
-                          'assets/images/Background.png', // Path to your image file
-                          fit: BoxFit.cover, // Ensure the image covers the entire area
-                        ),
-                      ),
-            Container(
-            padding: EdgeInsets.symmetric(vertical: 18, horizontal: 15),
-            child: Column(children: [
+      body: Stack(children: [
+        Positioned.fill(
+          child: Image.asset(
+            'assets/images/Background.png', // Path to your image file
+            fit: BoxFit.cover, // Ensure the image covers the entire area
+          ),
+        ),
+        ListView(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            children: [
               SizedBox(
                   height: 250,
-                  child:AppBar(
+                  child: AppBar(
                     backgroundColor: Colors.transparent,
                   )),
               CustomTextField(
@@ -47,7 +46,11 @@ class NamePage extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                       "BeLoved will only share your last name with matches.")),
-              SizedBox(height: 39,),
+              SizedBox(
+                height: 39,
+              ),
+              // Padding(padding: EdgeInsets.only(bottom: bottomPadding),
+              // child:
               NextButton(
                 buttonText: 'Next',
                 onPressed: () {
@@ -56,9 +59,9 @@ class NamePage extends StatelessWidget {
                       context, BasicDetailsPage.routeName);
                 },
               ),
+              // ),
             ]),
-          ),
-        ]),
+      ]),
       backgroundColor: Color(0xFFFFF7EE),
       resizeToAvoidBottomInset: false,
     );
