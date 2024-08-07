@@ -26,10 +26,10 @@ class NamePage extends StatelessWidget {
             Container(
             padding: EdgeInsets.symmetric(vertical: 18, horizontal: 15),
             child: Column(children: [
-              PreferredSize(
-                  preferredSize: Size.fromHeight(100),
+              SizedBox(
+                  height: 250,
                   child:AppBar(
-                    backgroundColor: Colors.blueAccent,
+                    backgroundColor: Colors.transparent,
                   )),
               CustomTextField(
                   controller: TextEditingController(),
@@ -47,7 +47,7 @@ class NamePage extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                       "BeLoved will only share your last name with matches.")),
-              SizedBox(height: 52,),
+              SizedBox(height: 39,),
               NextButton(
                 buttonText: 'Next',
                 onPressed: () {
@@ -60,6 +60,7 @@ class NamePage extends StatelessWidget {
           ),
         ]),
       backgroundColor: Color(0xFFFFF7EE),
+      resizeToAvoidBottomInset: false,
     );
   }
 }

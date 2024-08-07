@@ -52,13 +52,14 @@ class CustomTextField extends StatelessWidget {
             decoration: InputDecoration(
               isDense: true,
               hintText: hint,
-              //
               counterText: "",
               hintStyle: const TextStyle(
                   color: Colors.black, // Set the color for the hint text
                   fontSize: 16,
                   fontWeight: FontWeight.w500 // Set the size for the hint text
                   ),
+              filled: true,
+              fillColor: Colors.white,
               border: const OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey, width: 1.0),
                 borderRadius: BorderRadius.all(Radius.circular(6)),
