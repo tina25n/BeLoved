@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/next_button.dart';
-import '../widgets/text_field.dart';
+import '../widgets/text_field_cluster.dart';
 import 'basic_details.dart';
 
 class NamePage extends StatelessWidget {
