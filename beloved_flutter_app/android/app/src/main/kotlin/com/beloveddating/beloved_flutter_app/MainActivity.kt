@@ -1,4 +1,4 @@
-package com.example.beloved_flutter_app
+package com.beloveddating.beloved_flutter_app
 
 import io.flutter.embedding.android.FlutterActivity
 
