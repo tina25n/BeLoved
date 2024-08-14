@@ -15,14 +15,32 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopBar(
-          topText: 'Beloved'),
+        backgroundColor: Color(0xFFFFF7EE),
 
-      body: Center(
+      body: Stack(
+        children: [
+// Background image
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/Background.png', // Path to your image file
+              fit: BoxFit.cover, // Ensure the image covers the entire area
+            ),
+          ),
+      Center(
         child:
+
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Positioned.fill(
+                child: Image.asset(
+                  'assets/images/Logo.png', // Path to your image file
+                  fit: BoxFit.cover, // Ensure the image covers the entire area
+                ),
+              ),
+              SizedBox(
+                height: 60,
+              ),
               NextButton(
                 buttonText: 'Sign Up',
                 onPressed: () {
@@ -31,6 +49,9 @@ class StartPage extends StatelessWidget {
                       context, SignUpPage.routeName);
                 },
               ),
+              SizedBox(
+                height: 10,
+              ),
               NextButton(
                 buttonText: 'Log In',
                 onPressed: () {
@@ -38,10 +59,14 @@ class StartPage extends StatelessWidget {
                   Navigator.restorablePushNamed(
                       context, LogInPage.routeName);
             }
-            )
+            ),
+              SizedBox(
+                height: 100,
+              ),
             ]
           ),
         )
+      ])
       );
 
   }
