@@ -15,59 +15,55 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFFFF7EE),
-
+      backgroundColor: Color(0xFFFFF7EE),
       body: Stack(
         children: [
-// Background image
+          // Background image
           Positioned.fill(
             child: Image.asset(
               'assets/images/Background.png', // Path to your image file
               fit: BoxFit.cover, // Ensure the image covers the entire area
             ),
           ),
-      Center(
-        child:
-
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Positioned.fill(
-                child: Image.asset(
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Logo image (No need for Positioned.fill here)
+                Image.asset(
                   'assets/images/Logo.png', // Path to your image file
-                  fit: BoxFit.cover, // Ensure the image covers the entire area
+                  fit: BoxFit.cover,
                 ),
-              ),
-              SizedBox(
-                height: 60,
-              ),
-              NextButton(
-                buttonText: 'Sign Up',
-                onPressed: () {
-                  //Go to the Sign Up page
-                  Navigator.restorablePushNamed(
-                      context, SignUpPage.routeName);
-                },
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              NextButton(
-                buttonText: 'Log In',
-                onPressed: () {
-                  //Go to the Log In page
-                  Navigator.restorablePushNamed(
-                      context, LogInPage.routeName);
-            }
+                SizedBox(
+                  height: 60,
+                ),
+                NextButton(
+                  buttonText: 'Sign Up',
+                  onPressed: () {
+                    // Go to the Sign Up page
+                    Navigator.restorablePushNamed(
+                        context, SignUpPage.routeName);
+                  },
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                NextButton(
+                  buttonText: 'Log In',
+                  onPressed: () {
+                    // Go to the Log In page
+                    Navigator.restorablePushNamed(
+                        context, LogInPage.routeName);
+                  },
+                ),
+                SizedBox(
+                  height: 100,
+                ),
+              ],
             ),
-              SizedBox(
-                height: 100,
-              ),
-            ]
-          ),
-        )
-      ])
-      );
-
+          )
+        ],
+      ),
+    );
   }
 }
